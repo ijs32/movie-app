@@ -7,4 +7,5 @@ class MoviesController < ApplicationController
     search_id = params[:wildcard].to_i
     movie = Movie.find_by(id: search_id)
     render json: movie
+  end
 end
