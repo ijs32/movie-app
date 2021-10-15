@@ -13,3 +13,8 @@
 # actor.save
 # actor = Actor.new(first_name: "idk", last_name: "anymore-actors", known_for: "forgetable movie")
 # actor.save
+
+movie = Movie.new(title: "Shutter Island", year: 2004, plot: "crazy ppl on an island going crazy being confused and stuff")
+movie.save
+
+movie = Movie.new(title: "Inception", year: 2009, plot: "people goin into other ppls dreams but then dont know if they still in a dream or not or sumthin")
