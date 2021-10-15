@@ -4,9 +4,8 @@ prompt = TTY::Prompt.new
 
 choice = prompt.select("choose an option", ["Select a movie", "see all movies"])
 if choice == "Select a movie"
-  puts "enter a movie ID"
-  number = gets.chomp
-  request = HTTP.get("http://localhost:3000/movies/#{number}")
+  choice = prompt.select("choose an option", ["1", "2", "3"])
+  request = HTTP.get("http://localhost:3000/movies/#{choice}")
   request = request.parse(:json)
   pp request
 elsif choice == "see all movies"
