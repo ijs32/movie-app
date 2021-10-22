@@ -16,19 +16,27 @@ class ActorsController < ApplicationController
       age: params["age"],
       gender: params["gender"]
     )
-    actor.save 
-    render json: actor
+    if actor.save 
+      render json: actor
+    else
+      render json: {errors: actor.errors.full_messages}, status: 406
+    end
   end
   def patch
     id = params[:id]
     actor = Actor.find_by(id: :id)
+    
     actor.first_name = params["first_name"] || actor.first_name
     actor.last_name = params["last_name"] || actor.last_name
     actor.known_for = params["known_for"] || actor.known_for
     actor.age = params["age"] || actor.age
     actor.gender = params["gender"] || actor.gender
-    actor.save
-    render json: actor
+
+    if actor.save
+      render json: actor
+    else
+      render json: {errors: actor.errors.full_messages}, status: 406
+    end
   end
   def destroy
     id = params[:id]

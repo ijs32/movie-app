@@ -1,6 +1,20 @@
-POST http://localhost:3000/actor.json
+POST http://localhost:3000/actors.json
 Content-Type: application/json
 
 {
-  "id": "2"
+  "first_name": "a",
+  "last_name": "b",
+  "known_for": "",
+  "age": 10,
+  "gender": "m"
+}
+
+###
+
+POST http://localhost:3000/movies.json
+Content-Type: application/json
+
+{
+  "title": "",
+  "plot": "fopjghsoifhnosfpnbposeughjfpbuhfopjghsoifhnosfpnbposeughjfpbuhfopjghsoifhnosfpnbposeughjfpbuhfopjghsoifhnosfpnbposeughjfpbuhfopjghsoifhnosfpnbposeughjfpbuhfopjghsoifhnosfpnbposeughjfpbuhfopjghsoifhnosfpnbposeughjfpbuhfopjghsoifhnosfpnbposeughjfpbuhfopjghsoifhnosfpnbposeughjfpbuhfopjghsoifhnosfpnbposeughjfpbuhfopjghsoifhnosfpnbposeughjfpbuhfopjghsoifhnosfpnbposeughjfpbuhfopjghsoifhnosfpnbposeughjfpbuhfopjghsoifhnosfpnbposeughjfpbuhfopjghsoifhnosfpnbposeughjfpbuhfopjghsoifhnosfpnbposeughjfpbuhfopjghsoifhnosfpnbposeughjfpbuhfopjghsoifhnosfpnbposeughjfpbuhfopjghsoifhnosfpnbposeughjfpbuhfopjghsoifhnosfpnbposeughjfpbuhfopjghsoifhnosfpnbposeughjfpbuhfopjghsoifhnosfpnbposeughjfpbuhfopjghsoifhnosfpnbposeughjfpbuhfopjghsoifhnosfpnbposeughjfpbuhfopjghsoifhnosfpnbposeughjfpbuhfopjghsoifhnosfpnbposeughjfpbuhfopjghsoifhnosfpnbposeughjfpbuhfopjghsoifhnosfpnbposeughjfpbuhfopjghsoifhnosfpnbposeughjfpbuhfopjghsoifhnosfpnbposeughjfpbuh" 
 }

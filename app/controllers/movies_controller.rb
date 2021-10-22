@@ -16,19 +16,27 @@ class MoviesController < ApplicationController
       director: params["director"],
       english: params["english"] || true
     )
-    movie.save 
-    render json: movie
+    if movie.save 
+      render json: movie
+    else
+      render json: {errors: movie.errors.full_messages}, status: 406
+    end
   end
   def patch
     id = params[:id]
     movie = Movie.find_by(id: :id)
+    
     movie.title = params["title"] || movie.title
     movie.year = params["year"] || movie.year
     movie.plot = params["plot"] || movie.plot
     movie.director = params["director"] || movie.director
     movie.english = params["english"] || true
-    movie.save
-    render json: movie
+    
+    if movie.save
+      render json: movie
+    else
+      render json: {errors: movie.errors.full_messages}, status: 406
+    end
   end
   def destroy
     id = params[:id]
