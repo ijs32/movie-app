@@ -10,11 +10,12 @@ class ActorsController < ApplicationController
   end
   def create
     actor = Actor.new(
-      first_name: params["first_name"],
-      last_name: params["last_name"],
-      known_for: params["known_for"],
-      age: params["age"],
-      gender: params["gender"]
+      movie_id: params[:movie_id],
+      first_name: params[:first_name],
+      last_name: params[:last_name],
+      known_for: params[:known_for],
+      age: params[:age],
+      gender: params[:gender]
     )
     if actor.save 
       render json: actor
