@@ -8,3 +8,11 @@ Actor.create!([
   {first_name: "idk", last_name: "anymore-actors", known_for: "forgetable movie", age: "female", gender: 23, movie_id: 1},
   {first_name: "sdfA", last_name: "Bafd", known_for: "sfgsa", age: 15, gender: "male", movie_id: 1}
 ])
+Genre.create!([
+  {name: "Action"},
+  {name: "Horror"},
+  {name: "Romance"}
+])
+MovieGenre.create!([
+  {movie_id: 1, genre_id: 1}
+])
