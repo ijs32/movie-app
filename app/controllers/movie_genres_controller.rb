@@ -5,7 +5,7 @@ class MovieGenresController < ApplicationController
       movie_id: params[:movie_id]
     )
     if movie_genre.save
-      render json: genre
+      render json: movie_genre
     else
       render json: {errors: movie_genre.errors.full_messages}, status: 406
     end
