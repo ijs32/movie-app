@@ -30,3 +30,8 @@ Content-Type: application/json
   "genre_id": 1,
   "movie_id": 1
 }
+
+###
+
+GET http://localhost:3000/movies.json
+Content-Type: application/json

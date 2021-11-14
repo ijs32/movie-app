@@ -1,6 +1,6 @@
 class MoviesController < ApplicationController
-  before_action :authenicate_admin, except: [:index, :show]
-  before_action :authenticate_user
+  # before_action :authenicate_admin, except: [:index, :show]
+  # before_action :authenticate_user
   def index
     movie = Movie.all
     render json: movie
